@@ -1,21 +1,18 @@
-// server.js
-
 const express = require('express');
 const path = require('path')
 const cors = require('cors')
 const bodyParser = require('body-parser')
 const app = express();
 const dotenv = require('dotenv')
+const employeeRoutes = require('./employeeRoutes');
+const swaggerUi = require('swagger-ui-express');
+const swaggerSpec = require('./swagger');
 
 dotenv.config()
 const port = process.env.PORT
 
-// Import the MongoDB connection module
+// MongoDB connection module
 require('./mongoConnection');
-
-// Import the Swagger documentation
-const swaggerUi = require('swagger-ui-express');
-const swaggerSpec = require('./swagger');
 
 // Serve Swagger documentation
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
@@ -30,10 +27,6 @@ app.use(cors())
 
 // Static directory path
 app.use(express.static(path.join(__dirname, 'dist/HRMS-Front-End')))
-
-
-// Import routes
-const employeeRoutes = require('./employeeRoutes');
 
 app.use(express.json());
 

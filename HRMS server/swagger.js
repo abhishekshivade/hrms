@@ -1,5 +1,3 @@
-// swagger.js
-
 const swaggerJSDoc = require('swagger-jsdoc');
 
 const options = {
@@ -12,12 +10,11 @@ const options = {
     },
     servers: [
       {
-        url:"https://hrmsserver.onrender.com" || 'http://localhost:4000', // Update with your server's URL
-        description: 'Development server',
+        url:"https://hrmsserver.onrender.com" || 'http://localhost:4000',        description: 'Development server',
       },
     ],
   },
-  apis: ['./employeeRoutes.js'], // Path to your route file(s)
+  apis: ['./employeeRoutes.js'],
 };
 
 const swaggerSpec = swaggerJSDoc(options);

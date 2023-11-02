@@ -1,5 +1,3 @@
-// employeeRoutes.js
-
 const express = require('express');
 const router = express.Router();
 const Employee = require('./Employee');
@@ -34,7 +32,6 @@ const Employee = require('./Employee');
  */
 
 router.post('/', async (req, res) => {
-  // ... (same code as before)
   try {
     const employee = new Employee({
       EmployeeID: req.body.EmployeeID,
@@ -106,8 +103,6 @@ router.get('/:EmployeeID', async (req, res) => {
 });
 
 // Update an employee by EmployeeID
-
-
 
 /**
  * @swagger
