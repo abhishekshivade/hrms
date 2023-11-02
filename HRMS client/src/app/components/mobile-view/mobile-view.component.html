@@ -1,8 +1,9 @@
-<div *ngIf="isMobileView" class="m-5">
-  Please open this app on a desktop or laptop for the best experience.
-</div>
+<h5 *ngIf="isMobileView" class="m-5">
+  HRMS website is not accessible from Mobile and Tablet device.<br /><br />
+  Please open this website on a desktop or laptop for the best experience.
+</h5>
 
-<div *ngIf="!isMobileView" class="m-5">
-  <h1>Welcome to our website!</h1>
-  <p>We're happy to have you here.</p>
+<div *ngIf="!isMobileView" class="mx-auto mt-5 pt-5 w-25">
+  <h1 class="mx-auto">Welcome to HRMS</h1>
+  <h5 class="mx-4 px-4">We're happy to have you here.</h5>
 </div>
